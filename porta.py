@@ -69,9 +69,15 @@ def decrypt(key, words):
 def get_position(table, char):
     """
     >>> table = [
-    ...     ('ABCDEFGHIJKLM', 'UVWXYZNOPQRST'), ('ABCDEFGHIJKLM', 'NOPQRSTUVWXYZ'),
-    ...     ('ABCDEFGHIJKLM', 'STUVWXYZNOPQR'), ('ABCDEFGHIJKLM', 'QRSTUVWXYZNOP'),
-    ...     ('ABCDEFGHIJKLM', 'WXYZNOPQRSTUV'), ('ABCDEFGHIJKLM', 'UVWXYZNOPQRST')]
+    ... ('ABCDEFGHIJKLM', 'NOPQRSTUVWXYZ'),
+    ... ('ABCDEFGHIJKLM', 'YZNOPQRSTUVWX'),
+    ... ('ABCDEFGHIJKLM', 'RSTUVWXYZNOPQ'),
+    ... ('ABCDEFGHIJKLM', 'VWXYZNOPQRSTU'),
+    ... ('ABCDEFGHIJKLM', 'TUVWXYZNOPQRS'),
+    ... ('ABCDEFGHIJKLM', 'XYZNOPQRSTUVW'),
+    ... ('ABCDEFGHIJKLM', 'VWXYZNOPQRSTU'),
+    ... ('ABCDEFGHIJKLM', 'YZNOPQRSTUVWX'),
+    ... ('ABCDEFGHIJKLM', 'OPQRSTUVWXYZN')]
     >>> get_position(table, 'A')
     (None, None)
     """
@@ -85,9 +91,15 @@ def get_position(table, char):
 def get_opponent(table, char):
     """
     >>> table = [
-    ...     ('ABCDEFGHIJKLM', 'UVWXYZNOPQRST'), ('ABCDEFGHIJKLM', 'NOPQRSTUVWXYZ'),
-    ...     ('ABCDEFGHIJKLM', 'STUVWXYZNOPQR'), ('ABCDEFGHIJKLM', 'QRSTUVWXYZNOP'),
-    ...     ('ABCDEFGHIJKLM', 'WXYZNOPQRSTUV'), ('ABCDEFGHIJKLM', 'UVWXYZNOPQRST')]
+    ... ('ABCDEFGHIJKLM', 'NOPQRSTUVWXYZ'),
+    ... ('ABCDEFGHIJKLM', 'YZNOPQRSTUVWX'),
+    ... ('ABCDEFGHIJKLM', 'RSTUVWXYZNOPQ'),
+    ... ('ABCDEFGHIJKLM', 'VWXYZNOPQRSTU'),
+    ... ('ABCDEFGHIJKLM', 'TUVWXYZNOPQRS'),
+    ... ('ABCDEFGHIJKLM', 'XYZNOPQRSTUVW'),
+    ... ('ABCDEFGHIJKLM', 'VWXYZNOPQRSTU'),
+    ... ('ABCDEFGHIJKLM', 'YZNOPQRSTUVWX'),
+    ... ('ABCDEFGHIJKLM', 'OPQRSTUVWXYZN')]
     >>> get_opponent(table, 'A')
     'A'
     """
