@@ -162,13 +162,13 @@ if __name__ == "__main__":
     key = input("ENTER KEY: ").strip()
     text = input("ENTER TEXT TO ENCRYPT: ").strip()
     cipher_text = encrypt(key, text)
-
     # print(f"ENCRYPTED: {cipher_text}")
     # print(f"DECRYPTED WITH KEY: {decrypt(key, cipher_text)}")
 
-    string = text.upper()
-    keyword = cipher_text
+    string = text.upper().replace(" ", "")
+    keyword = cipher_text.replace(" ", "")
+
     key = generateKey(string, keyword)
     cipher_text = cipherText(string, key)
-    print("ENCRYPTED:", cipher_text)
+    print("ENCRYPTED MESSAGE:", cipher_text)
     print("DECRYPTED WITH KEY:", originalText(cipher_text, key))
